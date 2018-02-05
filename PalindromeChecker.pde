@@ -18,7 +18,7 @@ public void setup()
 public boolean palindrome(String word)
 {
   String deku = new String();
-  for(int i = word.length()-1; i >= 0; i--)
+  for(int i = 0; i < word.length(); i++)
   {
   if(Character.isLetter(word.charAt(i))== true)
   {
@@ -37,14 +37,7 @@ public String reverse(String str)
     String sNew = new String();
     int last = str.length()-1;
     for(int i = last; i >= 0; i--)
+    if(Character.isLetter(str.charAt(i))==true)
     sNew = sNew + str.substring(i, i+1);
     return sNew;
-}
-public String spaces(String todo)
-{
-  String deku = new String();
-  for(int i = 0; i < todo.length(); i++)
-  if(Character.isLetter(todo.charAt(i)) == true)
-  deku = deku + todo.substring(i, i+1);
-  return deku;
 }
